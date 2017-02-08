@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.esparza.burnedcaloriescalculator.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:textSize="20dp"
+        android:id="@+id/weightTV"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Miles Ran"
+        android:textSize="20dp"
+        android:id="@+id/milesRanTV"
+        android:layout_below="@+id/weightTV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories Burned"
+        android:textSize="20dp"
+        android:id="@+id/burnedTV"
+        android:layout_below="@+id/milesRanTV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp"
+        android:textStyle="bold"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        android:textSize="20dp"
+        android:id="@+id/HeightTV"
+        android:layout_below="@+id/burnedTV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI"
+        android:textSize="20dp"
+        android:id="@+id/BMITV"
+        android:layout_below="@+id/HeightTV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="34dp"
+        android:textStyle="bold"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="20dp"
+        android:id="@+id/NameTV"
+        android:layout_below="@+id/BMITV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="77dp"
+        android:textStyle="bold"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="20dp"
+        android:id="@+id/milesRanET"
+        android:layout_above="@+id/burnedTV"
+        android:layout_toRightOf="@+id/milesRanTV"
+        android:layout_toEndOf="@+id/milesRanTV"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00.0"
+        android:textSize="20dp"
+        android:id="@+id/burnedET"
+        android:layout_alignTop="@+id/burnedTV"
+        android:layout_alignLeft="@+id/weightET"
+        android:layout_alignStart="@+id/weightET"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="20dp"
+        android:id="@+id/BMIET"
+        android:layout_alignTop="@+id/BMITV"
+        android:layout_alignLeft="@+id/burnedET"
+        android:layout_alignStart="@+id/burnedET" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_alignBottom="@+id/milesRanET"
+        android:layout_toRightOf="@+id/milesRanET"
+        android:layout_toEndOf="@+id/milesRanET"
+        android:layout_marginLeft="72dp"
+        android:layout_marginStart="72dp"
+        android:indeterminate="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/weightET"
+        android:layout_alignTop="@+id/weightTV"
+        android:layout_toRightOf="@+id/milesRanET"
+        android:layout_toEndOf="@+id/milesRanET"
+        android:text="000"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="20dp"
+        android:ems="10"
+        android:id="@+id/nameET"
+        android:layout_alignBottom="@+id/NameTV"
+        android:layout_alignRight="@+id/weightET"
+        android:layout_alignEnd="@+id/weightET" />
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/feetSP"
+        android:layout_below="@+id/burnedTV"
+        android:layout_toRightOf="@+id/milesRanTV"
+        android:layout_toEndOf="@+id/milesRanTV"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/inchesSP"
+        android:layout_alignTop="@+id/feetSP"
+        android:layout_alignLeft="@+id/seekBar"
+        android:layout_alignStart="@+id/seekBar"
+        android:spinnerMode="dropdown" />
+
+</RelativeLayout>
